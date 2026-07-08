@@ -1,0 +1,44 @@
+class Solution(object):
+
+    def searchRange(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        left = self.findLeft(nums,target,0,len(nums)-1)
+        right = self.findRight(nums, target, 0, len(nums)-1)
+
+        return [left,right]
+        
+    def findLeft(self, arr, key, lo, hi):
+        res = -1
+        while lo <= hi:
+            mid = (hi + lo) // 2
+            if arr[mid] == key:
+                res = mid
+                hi = mid - 1
+            elif arr[mid] < target:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return res
+    
+    def findRight(self, arr, key, lo, hi):
+        res = -1
+        while lo <= hi:
+            mid = (lo + hi)//2
+            if arr[mid] == key:
+                res = mid
+                lo = mid + 1
+            elif arr[mid] < target:
+                lo = mid + 1
+            else:
+                hi = mid - 1
+        return res
+                
+        
+nums = [5,7,7,8,8,10]
+target  = 8
+sol = Solution()
+print(sol.searchRange(nums, target))

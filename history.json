@@ -1,0 +1,236 @@
+[
+    {
+        "timestamp": "2026-06-18T18:45:55.508603",
+        "company": "cloud99x",
+        "question": "What digital services do you offer?",
+        "matched_question": "What digital services do you offer?",
+        "answer": "We provide web development, mobile app development, AI/ML solutions, and cybersecurity.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:10.926050",
+        "company": "cloud99x",
+        "question": "What digital services do you offer?",
+        "matched_question": "What digital services do you offer?",
+        "answer": "We provide web development, mobile app development, AI/ML solutions, and cybersecurity.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:14.930079",
+        "company": "cloud99x",
+        "question": "Do you build custom software?",
+        "matched_question": "Do you build custom software?",
+        "answer": "Yes, we develop custom software platforms, e-commerce sites, and enterprise applications.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:16.715381",
+        "company": "cloud99x",
+        "question": "What technologies do you use?",
+        "matched_question": "What technologies do you use?",
+        "answer": "We specialize in React, Node.js, Python, AWS, and modern cloud architectures.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:48.346897",
+        "company": "connect_bpo",
+        "question": "What are your prices?",
+        "matched_question": "What are your prices?",
+        "answer": "Please contact our sales team for a custom quote based on your needs.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:49.849775",
+        "company": "connect_bpo",
+        "question": "What IT services do you provide?",
+        "matched_question": "What IT services do you provide?",
+        "answer": "We offer 24/7 IT help desk, network monitoring, infrastructure management, and end-user support.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:50.743824",
+        "company": "connect_bpo",
+        "question": "Where are you located?",
+        "matched_question": "Where are you located?",
+        "answer": "Our main office is in Colombo, Sri Lanka, with remote teams globally.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:53.278608",
+        "company": "cospaces",
+        "question": "What workspace options do you have?",
+        "matched_question": "What workspace options do you have?",
+        "answer": "We offer shared desks, private offices, virtual office addresses, and meeting rooms.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:54.271562",
+        "company": "cospaces",
+        "question": "What are your rates?",
+        "matched_question": "What are your rates?",
+        "answer": "Please visit our booking portal at cospaces.lk for current pricing.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:09:54.991562",
+        "company": "cospaces",
+        "question": "What are your business hours?",
+        "matched_question": "What are your business hours?",
+        "answer": "Monday to Friday, 8 AM to 8 PM. Private office tenants have 24/7 access.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T10:14:44.118475",
+        "company": "cospaces",
+        "question": "bla bla",
+        "matched_question": "What workspace options do you have?",
+        "answer": "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.",
+        "score": 0.0,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-06-23T11:07:06.150855",
+        "company": "cloud99x",
+        "question": "Do you build custom software?",
+        "matched_question": "Do you build custom software?",
+        "answer": "Yes, we develop custom software platforms, e-commerce sites, and enterprise applications.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T11:07:10.180987",
+        "company": "cloud99x",
+        "question": "What technologies do you use?",
+        "matched_question": "What technologies do you use?",
+        "answer": "We specialize in React, Node.js, Python, AWS, and modern cloud architectures.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T11:07:24.758078",
+        "company": "cloud99x",
+        "question": "What can you do",
+        "matched_question": "What technologies do you use?",
+        "answer": "We specialize in React, Node.js, Python, AWS, and modern cloud architectures.",
+        "score": 0.6241,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-23T11:07:28.663023",
+        "company": "cloud99x",
+        "question": "sadsada",
+        "matched_question": "What digital services do you offer?",
+        "answer": "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.",
+        "score": 0.0,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-06-23T11:08:35.355652",
+        "company": "connect_bpo",
+        "question": "How do I contact sales?",
+        "matched_question": "How do I contact sales?",
+        "answer": "Email sales@connectbpo.com or call +1-555-0123.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-25T19:43:17.865987",
+        "company": "connect_bpo",
+        "question": "What services do you offer?",
+        "matched_question": "What kind of services do you offer?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 0.7321,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-25T19:52:38.395071",
+        "company": "connect_bpo",
+        "question": "hi",
+        "matched_question": "What services does The Connect BPO provide?",
+        "answer": "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.",
+        "score": 0.0,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-06-25T19:53:30.714712",
+        "company": "connect_bpo",
+        "question": "What services does The Connect BPO provide?",
+        "matched_question": "What services does The Connect BPO provide?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-25T19:53:36.282776",
+        "company": "connect_bpo",
+        "question": "What services does The Connect BPO provide?",
+        "matched_question": "What services does The Connect BPO provide?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-25T19:53:48.232540",
+        "company": "connect_bpo",
+        "question": "What services does The Connect BPO provide?",
+        "matched_question": "What services does The Connect BPO provide?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-06-26T11:03:48.167606",
+        "company": "connect_bpo",
+        "question": "what services do you offer",
+        "matched_question": "What kind of services do you offer?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 0.7321,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-01T10:00:34.387018",
+        "company": "connect_bpo",
+        "question": "what services do you offer",
+        "matched_question": "What kind of services do you offer?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 0.7321,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-01T10:00:40.265497",
+        "company": "connect_bpo",
+        "question": "where are you located at",
+        "matched_question": "Are your services suitable for startups?",
+        "answer": "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.",
+        "score": 0.4181,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-07-01T16:02:24.620298",
+        "company": "connect_bpo",
+        "question": "what services do you offere",
+        "matched_question": "What kind of services do you offer?",
+        "answer": "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.",
+        "score": 0.5972,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-07-01T16:02:32.238051",
+        "company": "connect_bpo",
+        "question": "what services do you offer",
+        "matched_question": "What kind of services do you offer?",
+        "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
+        "score": 0.7321,
+        "fallback": false
+    }
+]

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectBPO — Smarter Business Processes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/widget.css">
+    <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --c-bg:      #f5f4ff;
+            --c-surface: #ffffff;
+            --c-ink:     #16133a;
+            --c-muted:   #6e6a8a;
+            --c-accent1: #6366f1;
+            --c-accent2: #8b5cf6;
+            --c-accent3: #ec4899;
+            --c-lime:    #a3e635;
+            --grad: linear-gradient(135deg, #6366f1 0%, #8b5cf6 55%, #ec4899 100%);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--c-bg);
+            color: var(--c-ink);
+            line-height: 1.6;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 900;
+            background: rgba(245,244,255,0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(99,102,241,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            height: 62px;
+        }
+
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--c-muted);
+            transition: color 0.18s;
+        }
+
+        .nav-links a:hover { color: var(--c-accent1); }
+
+        .nav-cta {
+            padding: 8px 22px;
+            background: var(--grad);
+            color: white !important;
+            border-radius: 24px;
+            font-weight: 600 !important;
+            font-size: 13.5px !important;
+            box-shadow: 0 4px 14px rgba(99,102,241,0.35);
+            transition: transform 0.15s, box-shadow 0.15s !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(99,102,241,0.45) !important;
+            color: white !important;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 6% 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.22;
+            pointer-events: none;
+        }
+        .blob1 { width: 520px; height: 520px; background: #6366f1; top: -140px; left: -120px; }
+        .blob2 { width: 420px; height: 420px; background: #ec4899; bottom: -100px; right: -80px; }
+        .blob3 { width: 300px; height: 300px; background: #8b5cf6; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+
+        .hero-inner { position: relative; z-index: 1; max-width: 760px; }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99,102,241,0.1);
+            border: 1px solid rgba(99,102,241,0.25);
+            border-radius: 24px;
+            padding: 5px 14px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--c-accent1);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .live-dot {
+            width: 7px; height: 7px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.25;} }
+
+        .hero h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(36px, 6vw, 66px);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--c-muted);
+            max-width: 540px;
+            margin: 0 auto 36px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 13px 30px;
+            background: var(--grad);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            box-shadow: 0 6px 22px rgba(99,102,241,0.38);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(99,102,241,0.48); }
+
+        .btn-ghost {
+            padding: 13px 30px;
+            background: white;
+            color: var(--c-ink);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border: 1.5px solid rgba(99,102,241,0.2);
+            transition: border-color 0.18s, background 0.18s;
+        }
+        .btn-ghost:hover { border-color: var(--c-accent1); background: rgba(99,102,241,0.04); }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 52px;
+            flex-wrap: wrap;
+        }
+
+        .stat { text-align: center; }
+        .stat-num {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label { font-size: 12.5px; color: var(--c-muted); font-weight: 500; margin-top: 2px; }
+
+        /* ── SECTION SHARED ── */
+        section { padding: 90px 6%; }
+
+        .section-tag {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--c-accent1);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(26px, 3.5vw, 40px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            max-width: 520px;
+            margin-bottom: 16px;
+        }
+
+        .section-body {
+            color: var(--c-muted);
+            font-size: 15.5px;
+            max-width: 520px;
+            margin-bottom: 40px;
+        }
+
+        /* ── SERVICES ── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px 26px;
+            border: 1.5px solid rgba(99,102,241,0.08);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: var(--grad);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(99,102,241,0.14);
+            border-color: rgba(99,102,241,0.25);
+        }
+
+        .service-card:hover::after { opacity: 0.03; }
+
+        .service-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.12));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 13.5px;
+            color: var(--c-muted);
+            line-height: 1.55;
+        }
+
+        /* ── WHY US / FEATURES ── */
+        #features { background: white; }
+
+        .features-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .feature-list { display: flex; flex-direction: column; gap: 26px; }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .feature-num {
+            flex-shrink: 0;
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            background: var(--grad);
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-item h4 {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+        .feature-item p { font-size: 13.5px; color: var(--c-muted); }
+
+        .features-visual {
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(99,102,241,0.15);
+            background: var(--grad);
+            padding: 36px;
+            color: white;
+        }
+
+        .visual-card {
+            background: rgba(255,255,255,0.12);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
+            backdrop-filter: blur(8px);
+        }
+
+        .visual-card:last-child { margin-bottom: 0; }
+
+        .visual-card-label { font-size: 11px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+        .visual-card-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 26px; font-weight: 800; }
+        .visual-card-sub   { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+
+        .visual-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .visual-bar-fill {
+            height: 100%;
+            background: white;
+            border-radius: 3px;
+            animation: bar-grow 1.4s ease-out forwards;
+        }
+
+        @keyframes bar-grow { from {width:0;} }
+
+        /* ── INDUSTRIES ── */
+        .industries-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .chip {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 13.5px;
+            font-weight: 600;
+            background: white;
+            border: 1.5px solid rgba(99,102,241,0.15);
+            color: var(--c-ink);
+            cursor: default;
+            transition: all 0.18s;
+        }
+
+        .chip:hover {
+            background: var(--grad);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(99,102,241,0.3);
+        }
+
+        /* ── TESTIMONIALS ── */
+        #testimonials { background: var(--c-ink); color: white; }
+
+        #testimonials .section-title { color: white; }
+        #testimonials .section-body  { color: rgba(255,255,255,0.6); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
+            padding: 28px;
+            transition: background 0.2s;
+        }
+
+        .testimonial-card:hover { background: rgba(255,255,255,0.08); }
+
+        .testimonial-quote {
+            font-size: 14px;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.82);
+            margin-bottom: 22px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            background: var(--grad);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .author-name { font-weight: 600; font-size: 13.5px; }
+        .author-role { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 1px; }
+
+        /* ── CTA STRIP ── */
+        .cta-strip {
+            background: var(--grad);
+            color: white;
+            text-align: center;
+            padding: 70px 6%;
+        }
+
+        .cta-strip h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(24px, 4vw, 44px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 14px;
+        }
+
+        .cta-strip p { font-size: 16px; opacity: 0.85; margin-bottom: 32px; }
+
+        .btn-white {
+            padding: 13px 32px;
+            background: white;
+            color: var(--c-accent1);
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.15s, box-shadow 0.15s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #0d0b22;
+            color: rgba(255,255,255,0.5);
+            padding: 40px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        footer p { font-size: 13px; }
+
+        /* ── DEMO BADGE (visible only on /demo) ── */
+        .demo-notice {
+            background: rgba(99,102,241,0.08);
+            border: 1px dashed rgba(99,102,241,0.35);
+            border-radius: 10px;
+            padding: 10px 18px;
+            font-size: 13px;
+            color: var(--c-accent1);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-width: fit-content;
+            margin: 0 auto 0 6%;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .features-layout { grid-template-columns: 1fr; }
+            .features-visual { display: none; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── DEMO NOTICE BAR ── -->
+    <div style="background:#6366f1; color:white; text-align:center; font-size:13px; padding:7px; font-weight:500; letter-spacing:0.01em;">
+        🧪 Demo page — Chat widget is live and connected to the backend. Try asking a question!
+        &nbsp;|&nbsp;
+        <a href="/" style="color:#c7d2fe; text-decoration:underline;">Go to Dashboard →</a>
+    </div>
+
+    <!-- ── NAV ── -->
+    <nav>
+        <a href="#" class="nav-logo">ConnectBPO</a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#features">Why Us</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="#" class="nav-cta">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-bg-blob blob1"></div>
+        <div class="hero-bg-blob blob2"></div>
+        <div class="hero-bg-blob blob3"></div>
+        <div class="hero-inner">
+            <div class="hero-tag">
+                <span class="live-dot"></span>
+                AI-Powered Support Available 24/7
+            </div>
+            <h1>Business Processes,<br><em>Brilliantly Handled.</em></h1>
+            <p>ConnectBPO streamlines your customer support, back-office operations, and data workflows — so your team can focus on what actually grows the business.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn-primary">Explore Services</a>
+                <a href="#features" class="btn-ghost">See How It Works</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
+                <div class="stat"><div class="stat-num">3 min</div><div class="stat-label">Avg. Response Time</div></div>
+                <div class="stat"><div class="stat-num">200+</div><div class="stat-label">Enterprise Clients</div></div>
+                <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Support Coverage</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section id="services">
+        <div class="section-tag">What We Do</div>
+        <div class="section-title">End-to-end BPO services that scale with you</div>
+        <div class="section-body">From customer contact centres to intelligent automation, we cover every layer of your operations with dedicated teams and technology.</div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Customer Support</h3>
+                <p>Omnichannel support across voice, email, chat, and social. Trained agents backed by AI triage for faster first-contact resolution.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Back-Office Processing</h3>
+                <p>Data entry, document verification, invoice processing and reconciliation handled accurately and at scale.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>AI Chatbot Integration</h3>
+                <p>Deploy intelligent FAQ bots on your website in minutes. Reduce ticket volume by up to 60% from day one.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Analytics & Reporting</h3>
+                <p>Real-time dashboards on agent performance, query trends, and customer sentiment to keep leadership informed.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Compliance & QA</h3>
+                <p>ISO-aligned quality frameworks and regular audits ensure every interaction meets your regulatory obligations.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌏</div>
+                <h3>Multilingual Teams</h3>
+                <p>Support your global customers in 14+ languages with native-speaker agents across multiple time zones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FEATURES ── -->
+    <section id="features">
+        <div class="features-layout">
+            <div>
+                <div class="section-tag">Why ConnectBPO</div>
+                <div class="section-title">Built for outcomes, not just outputs</div>
+                <div class="section-body">We don't measure success by hours logged. We measure by tickets resolved, costs reduced, and customers retained.</div>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-num">01</div>
+                        <div>
+                            <h4>Onboard in 72 hours</h4>
+                            <p>Dedicated implementation team gets your workflows live in days, not months. No lengthy procurement cycles.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">02</div>
+                        <div>
+                            <h4>Transparent SLAs</h4>
+                            <p>Fixed first-response and resolution targets written into every contract with automatic credit for any miss.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">03</div>
+                        <div>
+                            <h4>Elastic capacity</h4>
+                            <p>Scale headcount up or down within 48 hours to match seasonal peaks without carrying excess staff costs.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-num">04</div>
+                        <div>
+                            <h4>Dedicated account team</h4>
+                            <p>A single point of contact, weekly reviews, and a shared Slack channel — you always know what's happening.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-visual">
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:18px; font-weight:800; margin-bottom:20px; opacity:0.9;">This week at a glance</div>
+                <div class="visual-card">
+                    <div class="visual-card-label">Tickets Resolved</div>
+                    <div class="visual-card-value">4,821</div>
+                    <div class="visual-card-sub">↑ 12% vs last week</div>
+                    <div class="visual-bar"><div class="visual-bar-fill" style="width:87%"></div></div>
+                </div>
+                <div class="visual-card">
+                    <div class="visual-card-label">Avg. Handle Time</div>
+                    <div class="visual-card-value">3m 14s</div>
+                    <div class="visual-card-sub">↓ 8% improvement</div>
+                    <div class="visual-bar"><div class="visual-bar-fill" style="width:68%"></div></div>
+                </div>
+                <div class="visual-card">
+                    <div class="visual-card-label">CSAT Score</div>
+                    <div class="visual-card-value">96.4%</div>
+                    <div class="visual-card-sub">Above 95% target ✓</div>
+                    <div class="visual-bar"><div class="visual-bar-fill" style="width:96%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── INDUSTRIES ── -->
+    <section id="industries">
+        <div class="section-tag">Industries</div>
+        <div class="section-title">Trusted across every sector</div>
+        <div class="section-body">Whether you're in fintech or fast-food, we've built and run operations in your vertical before.</div>
+
+        <div class="industries-chips">
+            <span class="chip">🏦 Financial Services</span>
+            <span class="chip">🏥 Healthcare</span>
+            <span class="chip">🛍️ E-commerce & Retail</span>
+            <span class="chip">✈️ Travel & Hospitality</span>
+            <span class="chip">📦 Logistics</span>
+            <span class="chip">🎓 EdTech</span>
+            <span class="chip">📡 Telecom</span>
+            <span class="chip">🏗️ Real Estate</span>
+            <span class="chip">🧪 SaaS & Technology</span>
+            <span class="chip">🍔 Food & Beverage</span>
+        </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section id="testimonials">
+        <div class="section-tag" style="color:#a78bfa;">What clients say</div>
+        <div class="section-title">Results our clients talk about</div>
+        <div class="section-body">Don't take our word for it — here's what operations leaders across Sri Lanka and the region have to say.</div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"ConnectBPO cut our average response time from 9 hours to under 20 minutes. The AI chatbot alone deflects 55% of our tier-1 tickets. Genuinely impressed."</div>
+                <div class="testimonial-author">
+                    <div class="avatar">RW</div>
+                    <div>
+                        <div class="author-name">Ravi Wijesinghe</div>
+                        <div class="author-role">Head of Operations, CloudScale</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"We went live in four days. No IT involvement on our end whatsoever. The onboarding team handled everything and we started seeing deflection metrics from day one."</div>
+                <div class="testimonial-author">
+                    <div class="avatar">AN</div>
+                    <div>
+                        <div class="author-name">Amara Navaratne</div>
+                        <div class="author-role">CX Director, FinEdge Lanka</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"The multilingual team was a game-changer for our regional expansion. Support in Sinhala, Tamil, and English — handled seamlessly with the same CSAT we'd expect from English-only ops."</div>
+                <div class="testimonial-author">
+                    <div class="avatar">KF</div>
+                    <div>
+                        <div class="author-name">Kavya Fernando</div>
+                        <div class="author-role">VP Customer Success, RetailPlus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <div class="cta-strip">
+        <h2>Ready to transform your operations?</h2>
+        <p>Talk to a solutions consultant today — no commitment, no sales pressure.</p>
+        <a href="#" class="btn-white">Book a Free Consultation</a>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-logo">ConnectBPO</div>
+        <p>© 2026 ConnectBPO Ltd. — Colombo, Sri Lanka</p>
+        <p>Demo page for widget testing only.</p>
+    </footer>
+
+    <!-- ============================================================
+         CHAT WIDGET — floating draggable bubble
+         Loads widget.css (already in <head>) + widget.js below
+    ============================================================ -->
+
+    <!-- Launcher bubble -->
+    <div id="chat-launcher" title="Chat with us">💬</div>
+
+    <!-- Chat panel -->
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            <div id="chat-header-left">
+                <div id="chat-avatar">🤖</div>
+                <div id="chat-title-block">
+                    <span id="chat-title">ConnectBPO Assistant</span>
+                    <span id="chat-subtitle"><span class="header-dot"></span>Online</span>
+                </div>
+            </div>
+            <button id="chat-toggle" title="Close chat">✕</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask us anything…" autocomplete="off">
+            <button id="chat-send" title="Send">➤</button>
+        </div>
+    </div>
+
+    <script>
+        // Override API_URL before widget.js loads
+        window.__WIDGET_COMPANY__ = 'connect_bpo';
+    </script>
+    <script src="/static/js/widget.js"></script>
+</body>
+</html>

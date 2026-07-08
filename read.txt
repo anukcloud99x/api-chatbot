@@ -1,0 +1,2 @@
+Testing the logic of using tf-idf and cosine similarity using a simple knowledge database
+s

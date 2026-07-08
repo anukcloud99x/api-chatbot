@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Widget</title>
+    <link rel="stylesheet" href="/static/css/widget.css">
+</head>
+<body>
+
+    <!-- Floating Launcher Bubble -->
+    <div id="chat-launcher" title="Chat with us">💬</div>
+
+    <!-- Chat Panel (hidden by default) -->
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            <div id="chat-header-left">
+                <div id="chat-avatar">🤖</div>
+                <div id="chat-title-block">
+                    <span id="chat-title">Assistant</span>
+                    <span id="chat-subtitle"><span class="header-dot"></span>Online</span>
+                </div>
+            </div>
+            <button id="chat-toggle" title="Close chat">✕</button>
+        </div>
+
+        <div id="chat-messages"></div>
+
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type your message…" autocomplete="off">
+            <button id="chat-send" title="Send">➤</button>
+        </div>
+    </div>
+
+    <script src="/static/js/widget.js"></script>
+</body>
+</html>

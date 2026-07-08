@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot - Chat & Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="app-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-robot-astronaut"></i></span>
+                    <span class="logo-text">ChatBot</span>
+                </div>
+            </div>
+
+            <div class="company-selector-container">
+                <label for="sidebar-company-select" class="selector-label">Active Company Context</label>
+                <div class="custom-select-wrapper">
+                    <select id="sidebar-company-select" class="sidebar-select">
+                        <!-- Loaded dynamically -->
+                    </select>
+                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+                <button class="menu-item active" id="nav-chat" onclick="switchView('chat')">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Chat Interface</span>
+                </button>
+                <button class="menu-item" id="nav-admin" onclick="switchView('admin')">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Admin Dashboard</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="status-dot online"></span>
+                    <span class="status-name">Backend: Connected</span>
+                </div>
+                <div class="version">v1.2.0</div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <!-- Top bar -->
+            <header class="top-bar">
+                <div class="top-bar-title">
+                    <h1 id="view-title">Chat Assistant</h1>
+                    <p id="view-subtitle" class="subtitle">Interact with the FAQ chatbot instance</p>
+                </div>
+                <div class="top-bar-actions">
+                    <div class="active-badge" id="current-company-badge">
+                        <i class="fa-solid fa-building"></i>
+                        <span id="current-company-name">Loading...</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- VIEW 1: Chat Assistant -->
+            <section id="chat-view" class="view-panel active">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-box">
+                        <!-- Chat messages render here -->
+                    </div>
+
+                    <!-- Quick Suggestions -->
+                    <div class="suggestions-container" id="suggestions-box">
+                        <div class="suggestions-title">Suggested Questions:</div>
+                        <div class="suggestions-chips" id="suggestions-chips-container">
+                            <!-- Chips loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <form class="chat-input-area" id="chat-form" onsubmit="sendChatMessage(event)">
+                        <input type="text" id="chat-input" placeholder="Type your question here..." required
+                            autocomplete="off">
+                        <div class="input-actions">
+                            <button type="submit" class="btn-send" id="chat-send-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- VIEW 2: Admin Dashboard -->
+            <section id="admin-view" class="view-panel">
+                <div class="admin-tabs">
+                    <button class="admin-tab-btn active" onclick="switchAdminSubView('stats')">
+                        <i class="fa-solid fa-chart-pie"></i> Analytics Overview
+                    </button>
+                    <button class="admin-tab-btn" onclick="switchAdminSubView('faqs')">
+                        <i class="fa-solid fa-database"></i> FAQ Management
+                    </button>
+                    <button class="admin-tab-btn" onclick="switchAdminSubView('logs')">
+                        <i class="fa-solid fa-clock-rotate-left"></i> Query Logs
+                    </button>
+                </div>
+
+                <!-- Admin View 1: Analytics Overview -->
+                <div id="admin-subview-stats" class="admin-subview active">
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon purple"><i class="fa-solid fa-message"></i></div>
+                            <div class="metric-content">
+                                <h3>Total Queries</h3>
+                                <p class="metric-value" id="stat-total-queries">0</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon teal"><i class="fa-solid fa-square-poll-horizontal"></i></div>
+                            <div class="metric-content">
+                                <h3>Avg Confidence</h3>
+                                <p class="metric-value" id="stat-avg-confidence">0.0%</p>
+                            </div>
+                            <!-- Small dynamic progress bar inside card -->
+                            <div class="metric-progress-wrapper">
+                                <div class="metric-progress-bar" id="stat-avg-confidence-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon orange"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="metric-content">
+                                <h3>Low Confidence / Fallbacks</h3>
+                                <p class="metric-value" id="stat-low-confidence">0</p>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon indigo"><i class="fa-solid fa-file-invoice"></i></div>
+                            <div class="metric-content">
+                                <h3>Total FAQ Articles</h3>
+                                <p class="metric-value" id="stat-total-faqs">0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts-row">
+                        <div class="dashboard-card chart-card">
+                            <h2>Queries by Company</h2>
+                            <div class="bar-chart-container" id="bar-chart-companies">
+                                <!-- Dynamic bars will go here -->
+                                <div class="chart-empty">No queries logged yet. Start chatting to view analytics!</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-card threshold-card">
+                            <h2>Confidence Threshold Settings</h2>
+                            <p class="card-desc">Adjust the minimum confidence score required for the bot to serve a
+                                direct FAQ answer. Questions below this will return a standard support contact message.
+                            </p>
+                            <div class="threshold-slider-group">
+                                <span class="threshold-label">Threshold: <strong
+                                        id="threshold-val-display">60%</strong></span>
+                                <input type="range" id="threshold-slider" min="10" max="95" value="60"
+                                    oninput="updateThresholdDisplay(this.value)">
+                                <div class="slider-ticks">
+                                    <span>Low (10%)</span>
+                                    <span>Default (60%)</span>
+                                    <span>High (95%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin View 2: FAQ Management -->
+                <div id="admin-subview-faqs" class="admin-subview">
+                    <div class="subview-header">
+                        <div class="search-bar-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="faq-search" placeholder="Search FAQs..." oninput="filterFAQTable()">
+                        </div>
+                        <div class="filter-controls">
+                            <select id="faq-company-filter" class="form-select" onchange="filterFAQTable()">
+                                <option value="all">All Companies</option>
+                                <!-- Loaded dynamically -->
+                            </select>
+                            <button class="btn btn-primary" onclick="openFAQModal()">
+                                <i class="fa-solid fa-plus"></i> Add New FAQ
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card table-card">
+                        <div class="table-responsive">
+                            <table class="data-table" id="faqs-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 15%">Company</th>
+                                        <th style="width: 30%">Question</th>
+                                        <th style="width: 40%">Answer</th>
+                                        <th style="width: 15%; text-align: center;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="faqs-table-body">
+                                    <!-- Dynamic rows loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin View 3: Query Logs -->
+                <div id="admin-subview-logs" class="admin-subview">
+                    <div class="subview-header">
+                        <h2>Historical System Logs</h2>
+                        <button class="btn btn-danger" onclick="clearQueryLogs()">
+                            <i class="fa-solid fa-trash-can"></i> Clear History Logs
+                        </button>
+                    </div>
+
+                    <div class="dashboard-card table-card">
+                        <div class="table-responsive">
+                            <table class="data-table" id="logs-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 15%">Timestamp</th>
+                                        <th style="width: 15%">Company</th>
+                                        <th style="width: 25%">User Query</th>
+                                        <th style="width: 25%">Matched FAQ</th>
+                                        <th style="width: 10%; text-align: center;">Confidence</th>
+                                        <th style="width: 10%; text-align: center;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="logs-table-body">
+                                    <!-- Dynamic rows loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Form (Slide-in Drawer) for FAQ Add/Edit -->
+    <div id="faq-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="faq-modal-title">Add New FAQ</h2>
+                <button class="modal-close-btn" onclick="closeFAQModal()">&times;</button>
+            </div>
+            <form id="faq-form" onsubmit="saveFAQ(event)">
+                <input type="hidden" id="faq-edit-id" value="">
+
+                <div class="form-group">
+                    <label for="faq-form-company">Company</label>
+                    <!-- Select list or write new company -->
+                    <div class="company-input-group">
+                        <select id="faq-form-company-select" class="form-select"
+                            onchange="syncCompanyInput(this.value)">
+                            <option value="">-- Create New Company --</option>
+                        </select>
+                        <input type="text" id="faq-form-company" placeholder="Or enter new company code..." required
+                            class="form-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="faq-form-question">Question</label>
+                    <textarea id="faq-form-question" rows="3" required placeholder="Type the question query..."
+                        class="form-input"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="faq-form-answer">Answer</label>
+                    <textarea id="faq-form-answer" rows="5" required placeholder="Type the answer response..."
+                        class="form-input"></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeFAQModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="faq-modal-submit-btn">Save FAQ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification System -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Client-side JavaScript -->
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
