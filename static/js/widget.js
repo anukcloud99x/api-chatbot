@@ -2,7 +2,8 @@
 // CONFIGURATION
 // ============================================================
 
-const API_URL = 'http://localhost:5000/chat';
+// const API_URL = 'http://localhost:5000/chat';
+const API_URL = 'https://faq-chatbot-api-production-e7a1.up.railway.app/chat';
 
 // Detect company from domain or URL param (merged from chatbot-routing branch)
 function getCompanyFromDomain() {
