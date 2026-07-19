@@ -1,24 +1,72 @@
 company,question,answer
-connect_bpo,What services does The Connect BPO provide?,"The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support."
-connect_bpo,What kind of services do you offer?,"The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support."
-connect_bpo,Can you tell me what The Connect BPO does?,"The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support."
-connect_bpo,What does your company help businesses with?,The Connect BPO helps businesses by handling operational and support functions through outsourced services.
-connect_bpo,Do you offer accounting services?,"Yes, The Connect BPO offers accounting and bookkeeping services for businesses."
-connect_bpo,Can you help with bookkeeping?,"Yes, The Connect BPO provides bookkeeping and accounting support."
-connect_bpo,Do you provide finance-related support?,"Yes, finance and accounting support are among the services offered."
-connect_bpo,Who can use your services?,"Businesses of different sizes, including startups and established companies, can use The Connect BPO services."
-connect_bpo,Are your services suitable for startups?,"Yes, startups can use outsourcing services to reduce workload and focus on growth."
-connect_bpo,Can small businesses work with The Connect BPO?,"Yes, small businesses can benefit from outsourcing administrative and operational tasks."
-connect_bpo,Do you work with international clients?,"Yes, The Connect BPO provides support for clients in international markets."
-connect_bpo,Can businesses outside Sri Lanka hire you?,"Yes, businesses from different countries can engage The Connect BPO for outsourcing services."
-connect_bpo,How does outsourcing help my business?,"Outsourcing can reduce costs, improve efficiency, and allow businesses to focus on core activities."
-connect_bpo,Why should I outsource my operations?,"Outsourcing helps businesses save time, access skilled professionals, and improve productivity."
-connect_bpo,Can I hire a virtual assistant through you?,"Yes, businesses can engage virtual assistants and dedicated support professionals."
-connect_bpo,Do you provide dedicated remote staff?,"Yes, dedicated virtual and remote support resources can be arranged based on business needs."
-connect_bpo,How do I get started with The Connect BPO?,You can contact The Connect BPO through the website to discuss your requirements.
-connect_bpo,What's the process for becoming a client?,"Contact the team, discuss your needs, and receive a tailored outsourcing solution."
-connect_bpo,How can I contact your team?,You can reach out through the contact channels provided on the website.
-connect_bpo,Can you create a custom outsourcing solution for my company?,"Yes, services can be tailored according to your business requirements."
+connect_bpo,What services does The Connect BPO provide?,"Connect BPO provides managed outsourcing across customer support (voice, chat, email), IT support and infrastructure, finance and accounting, human resources outsourcing, data and analytics, application support and maintenance, quality assurance and testing, software development (via Cloud99X), knowledge and legal process outsourcing, back-office support, technical support, and order management."
+connect_bpo,What kind of services do you offer?,"Connect BPO offers structured BPO and IT outsourcing services including customer support, IT support and infrastructure, finance and accounting, HR outsourcing, data and analytics, application support and maintenance, QA and testing, software development via Cloud99X, and knowledge and legal process outsourcing."
+connect_bpo,What services do you guys provide?,"Our services include customer support (voice, chat, email), IT support and infrastructure, finance and accounting, human resources outsourcing, data and analytics, application support and maintenance, quality assurance and testing, software development through Cloud99X, back-office support, and knowledge and legal process outsourcing."
+connect_bpo,Can you tell me what The Connect BPO does?,"Connect BPO is a high-governance BPO partner that delivers managed outsourcing across business functions, backed by Cloud99X technology infrastructure and governed to Kanrich Group standards."
+connect_bpo,What does your company help businesses with?,"Connect BPO helps businesses streamline operations through managed outsourcing — including customer support, IT, finance, HR, data and analytics, application support, QA, and software development via Cloud99X."
+connect_bpo,What do you guys do?,"Connect BPO provides structured outsourcing and dependable operations with corporate backing from the Kanrich Group. We handle customer support, IT support, finance and accounting, HR, data analytics, application support, QA testing, and software development via Cloud99X."
+connect_bpo,List all your services,"Connect BPO services include: customer support (voice, chat, email); IT support and infrastructure; finance and accounting; human resources outsourcing; data and analytics; application support and maintenance; quality assurance and testing; software development via Cloud99X; knowledge and legal process outsourcing; back-office support; technical support; and order management."
+connect_bpo,Do you offer customer support services?,"Yes. Connect BPO provides customer support across voice, chat, and email channels as part of our managed outsourcing services."
+connect_bpo,Do you handle voice chat and email support?,"Yes. We provide customer support covering voice, chat, and email for client businesses."
+connect_bpo,Do you provide IT support?,"Yes. Connect BPO offers IT support and infrastructure services including managed IT helpdesk, systems monitoring, and cybersecurity, powered by Cloud99X."
+connect_bpo,Do you have IT support and infrastructure?,"Yes. We provide managed IT helpdesk, systems monitoring, and cybersecurity services powered by Cloud99X."
+connect_bpo,Can you handle my IT needs?,"Yes. Connect BPO delivers IT support and infrastructure — helpdesk, monitoring, and cybersecurity — supported by Cloud99X technology operations."
+connect_bpo,Do you offer application support and maintenance?,"Yes. We provide end-to-end application lifecycle management including bug fixes, patch management, performance tuning, and version upgrades."
+connect_bpo,Do you do bug fixes and patch management?,"Yes. Our Application Support and Maintenance service covers bug fixes, patch management, performance tuning, and version upgrades."
+connect_bpo,Do you provide software development?,"Yes. Connect BPO provides software development through Cloud99X — custom software solutions designed to solve unique business challenges and drive digital transformation."
+connect_bpo,Can you build software for us?,"Yes. Software development is available via Cloud99X, our technology partner within the Kanrich Group."
+connect_bpo,Do you offer quality assurance and testing?,"Yes. We provide comprehensive QA services covering manual testing, automation, regression QA, and bug reporting to ensure reliable software delivery."
+connect_bpo,Do you do QA and testing?,"Yes. Connect BPO offers Quality Assurance and Testing including manual testing, automation, regression testing, and bug reporting."
+connect_bpo,Do you provide data and analytics services?,"Yes. Our Data and Analytics services include data engineering, BI dashboards, predictive analytics, and machine learning for informed business decisions."
+connect_bpo,Can you help with BI dashboards and data engineering?,"Yes. Connect BPO provides data engineering, BI dashboards, predictive analytics, and machine learning as part of our Data and Analytics offering."
+connect_bpo,Do you offer accounting services?,"Yes. Finance and accounting support are among Connect BPO's core outsourcing services."
+connect_bpo,Can you help with bookkeeping?,"Yes. Connect BPO provides finance and accounting support, including bookkeeping-related back-office work as part of our finance outsourcing services."
+connect_bpo,Do you provide finance-related support?,"Yes. We offer finance and accounting outsourcing with defined processes and transparent pricing."
+connect_bpo,Do you offer human resources outsourcing?,"Yes. Connect BPO provides human resources outsourcing as part of our managed BPO services."
+connect_bpo,Do you handle HR outsourcing?,"Yes. Human resources outsourcing is one of the services we provide to help businesses manage HR operations efficiently."
+connect_bpo,Do you offer knowledge and legal process outsourcing?,"Yes. Connect BPO provides knowledge and legal process outsourcing for professional and legal support functions."
+connect_bpo,Do you provide back office support?,"Yes. We provide essential back-office support for smooth daily operations across commercial partners, international organizations, and government clients."
+connect_bpo,Do you offer order management?,"Yes. Order management is among the services listed by Connect BPO, alongside back-office and technical support."
+connect_bpo,Do you provide technical support?,"Yes. Technical support is part of our service offering, alongside IT support and infrastructure powered by Cloud99X."
+connect_bpo,What industries do you serve?,"We serve clients in technology and SaaS, e-commerce and retail, financial services and FinTech, healthcare and health technology, professional services and legal, and logistics and supply chain."
+connect_bpo,What industries do you have experience in?,"Connect BPO works across technology and SaaS, finance and banking, e-commerce, education and EdTech, professional services and legal, healthcare, and logistics."
+connect_bpo,Do you work with finance and banking clients?,"Yes. Finance and banking is one of the industries we serve, with frameworks adapted to compliance and operational requirements."
+connect_bpo,Do you serve technology and SaaS companies?,"Yes. Technology and SaaS is a core industry we serve with enterprise-grade operational support."
+connect_bpo,Do you work with e-commerce businesses?,"Yes. We serve e-commerce and retail businesses with outsourcing frameworks suited to their operational needs."
+connect_bpo,Who can use your services?,"We work with businesses across different sizes and growth stages — from growing SMEs establishing their first outsourced function to larger enterprises seeking a governed outsourcing partner at scale."
+connect_bpo,Are your services suitable for startups?,"Yes. Growing SMEs and startups can engage Connect BPO for structured outsourcing with defined SLAs and transparent pricing."
+connect_bpo,Can small businesses work with The Connect BPO?,"Yes. Small and growing businesses can use our dedicated-team outsourcing model to streamline operations without building large in-house teams."
+connect_bpo,Do you work with both small businesses and large enterprises?,"Yes. We work with businesses across different sizes — from SMEs to larger enterprises seeking a reliable, governed outsourcing partner."
+connect_bpo,Do you work with international clients?,"Yes. We work with clients across the UK, Europe, Australia, the Middle East, and South and Southeast Asia. Our operations are based in Colombo, Sri Lanka."
+connect_bpo,Which countries and regions do you serve?,"We serve clients across the UK, Europe, Australia, the Middle East, and South and Southeast Asia, working across time zones to align with client business hours."
+connect_bpo,Can businesses outside Sri Lanka hire you?,"Yes. International businesses can engage Connect BPO. We operate from Colombo and align with client time zones."
+connect_bpo,What makes Connect BPO different from other outsourcing providers?,"Connect BPO is backed by the Kanrich Group. Clients get documented governance, financial stability, and long-term commitment. We use a dedicated-team model with defined SLAs, transparent pricing, and a named account manager for every engagement."
+connect_bpo,Why should I choose Connect BPO?,"Clients choose Connect BPO for institutional backing from Kanrich Group, secure infrastructure from Cloud99X, transparent fixed-scope pricing, dedicated teams, GDPR-aligned operations, and a long-term partnership focus."
+connect_bpo,What are the benefits of working with you?,"Key benefits include institutional backing (Kanrich Group), secure infrastructure (Cloud99X), transparent pricing with defined SLAs, dedicated teams (not shared pools), GDPR-aligned operations, and long-term partnership focus."
+connect_bpo,Are you part of Kanrich Group?,"Yes. Connect BPO is a member of the Kanrich Group, a diversified Sri Lankan corporate group with over five decades of operating history."
+connect_bpo,How is Connect BPO related to Cloud99X?,"Cloud99X is our technology and infrastructure partner within the Kanrich Group. Cloud99X supports our secure infrastructure, monitoring, cybersecurity, and software development delivery."
+connect_bpo,How is pricing structured?,"We use a fixed-scope pricing model. You receive a clear proposal with defined deliverables, team structure, and monthly cost before signing. There are no hidden fees. Pricing is reviewed transparently at each contract renewal."
+connect_bpo,How much do your services cost?,"Pricing is fixed-scope and proposal-based. You get defined deliverables, team structure, and monthly cost upfront with no hidden fees. Contact hello@theconnectbpo.com for a tailored proposal."
+connect_bpo,Do you have hidden fees?,"No. Connect BPO uses transparent fixed-scope pricing with defined SLAs. You know exactly what you are paying and what you receive."
+connect_bpo,How does the onboarding process work?,"Onboarding follows five steps: assess (review requirements and volumes), design (configure service model and team), onboard (documentation, system integration, training), operate (live operations with agreed SLAs), and optimise (performance reviews and continuous improvement)."
+connect_bpo,What is your engagement process?,"Our process is Assess → Design → Onboard → Operate → Optimise — a structured model from first conversation to live operations with continuous improvement."
+connect_bpo,What's the process for becoming a client?,"Reach out via the contact form or email hello@theconnectbpo.com. We respond within one business day, schedule an initial call, then move through assess, design, onboard, operate, and optimise."
+connect_bpo,How do I get started with The Connect BPO?,"Email hello@theconnectbpo.com or use the Get In Touch form on theconnectbpo.com. We respond within one business day and schedule an initial call to understand your requirements."
+connect_bpo,How can I contact your team?,"Email hello@theconnectbpo.com or call +94 76 855 10 32. You can also use the contact form on https://www.theconnectbpo.com/. We respond within one business day."
+connect_bpo,What is your email address?,You can reach Connect BPO at hello@theconnectbpo.com.
+connect_bpo,What is your phone number?,You can call Connect BPO at +94 76 855 10 32.
+connect_bpo,Where is Connect BPO located?,"Our offices are at No. 6-1/1, 3rd Floor, Joseph Lane, Colombo 04, Sri Lanka. We are open Monday to Friday, 9:00 AM to 5:00 PM Sri Lanka Standard Time (UTC+5:30)."
+connect_bpo,What are your office hours?,"Connect BPO is open Monday to Friday, 9:00 AM to 5:00 PM Sri Lanka Standard Time (UTC+5:30)."
+connect_bpo,What security and compliance standards do you follow?,"Our operations align with GDPR and international data protection standards. Technology infrastructure and cybersecurity are managed by Cloud99X. We apply data access controls, regular security audits, and documented incident response. Engagements are bound to ISO 27001 standards with 99.9% operational uptime."
+connect_bpo,Are you GDPR compliant?,"Yes. Our processes align with GDPR requirements and international data protection standards."
+connect_bpo,Do you follow ISO 27001?,"Yes. Engagements are strictly bound to ISO 27001 security standards, with guaranteed 99.9% operational uptime."
+connect_bpo,Do you provide dedicated teams?,"Yes. Each client is assigned a dedicated team — not shared or pooled resources — with a named account manager for every engagement."
+connect_bpo,Do you provide dedicated remote staff?,"Yes. Connect BPO operates on a dedicated-team model so clients get assigned resources focused on their engagement."
+connect_bpo,Can you create a custom outsourcing solution for my company?,"Yes. After assessing your requirements and volumes, we design a tailored service model, team structure, and SLAs before onboarding."
+connect_bpo,How does outsourcing help my business?,"Outsourcing with Connect BPO reduces operational complexity, improves efficiency, and lets your team focus on core growth — with defined SLAs, transparent pricing, and institutional governance."
+connect_bpo,Why should I outsource my operations?,"Outsourcing through Connect BPO gives you structured processes, dedicated teams, Cloud99X-backed infrastructure, and Kanrich Group governance so you can operate with greater efficiency and confidence."
+connect_bpo,Who is The Connect BPO?,"The Connect BPO is a Sri Lanka-based BPO company and member of the Kanrich Group. We deliver structured outsourcing, dependable operations, and corporate-backed governance for international businesses."
+connect_bpo,What is your mission?,"Our mission is to deliver dependable, professionally managed outsourcing services that allow clients to operate with greater efficiency and focus on their core business, backed by the institutional stability of the Kanrich Group."
 connect_bpo,Hi,Hello! Welcome to The Connect BPO. How can I help you today?
 connect_bpo,Hello,Hi there! Welcome to The Connect BPO. What can I help you with today?
 connect_bpo,Hey,Hey! Welcome to The Connect BPO. How can I assist you?
@@ -30,17 +78,17 @@ connect_bpo,What's up?,Hi! I'm here to help answer questions about The Connect B
 connect_bpo,How are you?,"I'm doing great, thanks for asking! How can I help you today?"
 connect_bpo,How's it going?,I'm doing well! What would you like to know about The Connect BPO?
 connect_bpo,Nice to meet you,Nice to meet you too! How can I help?
-connect_bpo,Can you help me?,Absolutely! Ask me anything about The Connect BPO's services.
-connect_bpo,I need help,I'd be happy to help. What would you like to know?
-connect_bpo,Who are you?,I'm The Connect BPO virtual assistant. I can answer questions about our services and outsourcing solutions.
-connect_bpo,What can you do?,"I can answer questions about our services, outsourcing solutions, accounting, bookkeeping, and virtual assistance."
-connect_bpo,What do you do?,I provide information about The Connect BPO and help answer your questions.
+connect_bpo,Can you help me?,"Absolutely! Ask me about our services such as customer support, IT, finance, HR, data analytics, QA, application support, or how to get started."
+connect_bpo,I need help,I'd be happy to help. What would you like to know about Connect BPO?
+connect_bpo,Who are you?,"I'm The Connect BPO virtual assistant. I can answer questions about our outsourcing services, industries, pricing, security, and how to get started."
+connect_bpo,What can you do?,"I can answer questions about Connect BPO services including customer support, IT support, finance and accounting, HR outsourcing, data and analytics, application support, QA testing, software development via Cloud99X, pricing, location, and onboarding."
+connect_bpo,What do you do?,I provide information about The Connect BPO and help answer your questions about our services.
 connect_bpo,Thank you,You're very welcome! Let me know if there's anything else I can help with.
 connect_bpo,Thanks,Happy to help! Feel free to ask another question.
 connect_bpo,Bye,Goodbye! Thanks for visiting The Connect BPO. Have a wonderful day!
 connect_bpo,Goodbye,Goodbye! We hope to assist you again soon.
 connect_bpo,See you later,See you! Feel free to come back anytime.
-connect_bpo,I don't know what to ask,"No worries! You can ask about our services, pricing, accounting, bookkeeping, outsourcing, or how to get started."
+connect_bpo,I don't know what to ask,"No worries! You can ask about our services (customer support, IT, finance, HR, data analytics, QA, application support), pricing, industries, security, location, or how to get started."
 connect_bpo,Can I ask you something?,Of course! Go ahead and ask your question.
 connect_bpo,Are you a real person?,I'm an AI virtual assistant created to help answer questions about The Connect BPO.
 connect_bpo,Are you a chatbot?,Yes! I'm The Connect BPO virtual assistant.
