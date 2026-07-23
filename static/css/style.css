@@ -360,6 +360,7 @@ button, input, select, textarea {
     line-height: 1.5;
     position: relative;
     word-break: break-word;
+    white-space: pre-wrap;
 }
 
 .message.bot .message-content {

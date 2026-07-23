@@ -128,7 +128,7 @@ def chat():
         'matched_question': response_data['matched_question'],
         'answer': response_data['answer'],
         'score': round(response_data.get('score', response_data.get('confidence', 0.0)), 4),
-        'fallback': response_data.get('fallback', response_data['answer'].startswith("I'm sorry, I don't have"))
+        'fallback': response_data.get('fallback', 'outside my capabilities' in response_data.get('answer', '').lower())
     }
     history.append(log_entry)
     save_history(history)

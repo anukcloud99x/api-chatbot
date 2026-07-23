@@ -83,9 +83,17 @@ class Chatbot:
             return result['answer']
         else:
             print(f"Best match: {result['question']}") #
-            print(f"Answer:","I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.")#
+            fallback = (
+                "The question you asked is outside my capabilities. "
+                "Please use one of the communication channels below and our team will be happy to help.\n\n"
+                "Connect BPO contact details:\n"
+                "Email: hello@theconnectbpo.com\n"
+                "Phone: +94 76 855 10 32\n"
+                "Contact form: https://www.theconnectbpo.com/"
+            )
+            print(f"Answer:", fallback)
             print(f"Confidence: {result['score']}") #
-            return "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance."
+            return fallback
     
         
 bot = Chatbot('faqs.csv')

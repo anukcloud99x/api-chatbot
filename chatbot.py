@@ -5,6 +5,28 @@ import numpy as np
 import os
 
 class ChatbotService:
+    # Contact details used in fallback replies when no FAQ match is found
+    COMPANY_CONTACTS = {
+        'connect_bpo': {
+            'name': 'Connect BPO',
+            'email': 'hello@theconnectbpo.com',
+            'phone': '+94 76 855 10 32',
+            'contact_form': 'https://www.theconnectbpo.com/',
+        },
+        'cloud99x': {
+            'name': 'Cloud99X',
+            'email': 'hello@cloud99x.com',
+            'phone': '076 855 1032',
+            'contact_form': 'https://www.cloud99x.com/contact',
+        },
+        'cospaces': {
+            'name': 'CoSpaces',
+            'email': 'cospaces.operations@gmail.com',
+            'phone': '+94 70 314 0140',
+            'contact_form': 'https://www.cospaces.lk/',
+        },
+    }
+
     def __init__(self, faqs_folder='faqs'):
         self.faqs_folder = faqs_folder
         if not os.path.exists(self.faqs_folder):
@@ -16,6 +38,30 @@ class ChatbotService:
         self.company_faqs = None
         self.available_companies = self._get_available_companies()
         self.load_data()
+
+    def get_fallback_message(self, company_name=None):
+        """Professional fallback with company contact channels."""
+        company = (company_name or self.company_name or '').strip().lower()
+        contact = self.COMPANY_CONTACTS.get(company)
+
+        intro = (
+            "The question you asked is outside my capabilities. "
+            "Please use one of the communication channels below and our team will be happy to help."
+        )
+
+        if not contact:
+            return (
+                f"{intro}\n\n"
+                "Contact form / website: please visit the company website for support details."
+            )
+
+        return (
+            f"{intro}\n\n"
+            f"{contact['name']} contact details:\n"
+            f"Email: {contact['email']}\n"
+            f"Phone: {contact['phone']}\n"
+            f"Contact form: {contact['contact_form']}"
+        )
 
     def _get_available_companies(self):
         """Get list of all available companies from CSV files."""
@@ -111,7 +157,7 @@ class ChatbotService:
             
         if self.kb_vectors is None or self.company_faqs is None or len(self.company_faqs) == 0:
             return {
-                'answer': "I'm sorry, I don't have any knowledge base loaded for this company.",
+                'answer': self.get_fallback_message(),
                 'matched_question': None,
                 'score': 0.0,
                 'fallback': True
@@ -120,7 +166,7 @@ class ChatbotService:
         result = self.find_best_match(user_question)
         if not result:
             return {
-                'answer': "I'm sorry, I don't have any data for this company yet.",
+                'answer': self.get_fallback_message(),
                 'matched_question': None,
                 'score': 0.0,
                 'fallback': True
@@ -135,7 +181,7 @@ class ChatbotService:
             }
         else:
             return {
-                'answer': "I'm sorry, I don't have an answer for that question. Please contact our support team directly for assistance.",
+                'answer': self.get_fallback_message(),
                 'matched_question': result['question'],
                 'score': result['score'],
                 'fallback': True
