@@ -2,7 +2,10 @@
 // CONFIGURATION
 // ============================================================
 
-const API_URL = 'https://faq-chatbot-api-production-e7a1.up.railway.app/chat';
+// Use local API when testing on localhost; otherwise use the deployed Railway API
+const API_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? `${window.location.origin}/chat`
+    : 'https://faq-chatbot-api-production-e7a1.up.railway.app/chat';
 
 // Detect company from domain or URL param (merged from chatbot-routing branch)
 function getCompanyFromDomain() {

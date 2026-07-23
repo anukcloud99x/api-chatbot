@@ -232,5 +232,95 @@
         "answer": "The Connect BPO provides outsourcing services including customer support, back-office operations, virtual assistance, accounting, bookkeeping, and finance-related support.",
         "score": 0.7321,
         "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:05:27.116400",
+        "company": "cloud99x",
+        "question": "How can I get in touch with Cloud99X?",
+        "matched_question": "How can I get in touch with Cloud99X?",
+        "answer": "You can email hello@cloud99x.com, call 076 855 1032, or use the contact form on https://www.cloud99x.com/contact. We are available Monday to Sunday, 24x7.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:20:25.563062",
+        "company": "connect_bpo",
+        "question": "how can i get more information on your services",
+        "matched_question": "How can I get more information on your services?",
+        "answer": "For more information on Connect BPO services, email hello@theconnectbpo.com, call +94 76 855 10 32, or use the Get In Touch form on https://www.theconnectbpo.com/. Our services include customer support, IT support, finance and accounting, HR outsourcing, data and analytics, application support, QA testing, and software development via Cloud99X.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:21:31.564625",
+        "company": "connect_bpo",
+        "question": "can i got your contact information?",
+        "matched_question": "Can I get your contact information?",
+        "answer": "Yes. Email hello@theconnectbpo.com, call +94 76 855 10 32, or use the contact form on https://www.theconnectbpo.com/. We respond within one business day.",
+        "score": 0.8575,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:34:04.713460",
+        "company": "connect_bpo",
+        "question": "can i know about your company",
+        "matched_question": "I need more information about your services",
+        "answer": "The question you asked is outside my capabilities. Please use one of the communication channels below and our team will be happy to help.\n\nConnect BPO contact details:\nEmail: hello@theconnectbpo.com\nPhone: +94 76 855 10 32\nContact form: https://www.theconnectbpo.com/",
+        "score": 0.3505,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-07-23T16:34:39.188972",
+        "company": "cloud99x",
+        "question": "can  i know about your coimapny",
+        "matched_question": "I need more information about your services",
+        "answer": "The question you asked is outside my capabilities. Please use one of the communication channels below and our team will be happy to help.\n\nCloud99X contact details:\nEmail: hello@cloud99x.com\nPhone: 076 855 1032\nContact form: https://www.cloud99x.com/contact",
+        "score": 0.3954,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-07-23T16:36:33.655990",
+        "company": "cloud99x",
+        "question": "can i know about your company",
+        "matched_question": "Can I know about your company?",
+        "answer": "Cloud99X is a Sri Lankan digital technology company that helps businesses concept, craft, and launch digital products. We deliver web development, mobile development, software development, technical consultancy, e-commerce, AI, blockchain and Web 3.0, cybersecurity, and cloud and IT services.",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:36:44.559174",
+        "company": "cloud99x",
+        "question": "how are you doing",
+        "matched_question": "How are you?",
+        "answer": "I'm doing great! Thanks for asking. How can I help?",
+        "score": 1.0,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:37:00.340543",
+        "company": "cloud99x",
+        "question": "are you support HR related tasks",
+        "matched_question": "How are you?",
+        "answer": "The question you asked is outside my capabilities. Please use one of the communication channels below and our team will be happy to help.\n\nCloud99X contact details:\nEmail: hello@cloud99x.com\nPhone: 076 855 1032\nContact form: https://www.cloud99x.com/contact",
+        "score": 0.4914,
+        "fallback": true
+    },
+    {
+        "timestamp": "2026-07-23T16:37:15.207230",
+        "company": "connect_bpo",
+        "question": "can i got your contact information?",
+        "matched_question": "Can I get your contact information?",
+        "answer": "Yes. Email hello@theconnectbpo.com, call +94 76 855 10 32, or use the contact form on https://www.theconnectbpo.com/. We respond within one business day.",
+        "score": 0.8544,
+        "fallback": false
+    },
+    {
+        "timestamp": "2026-07-23T16:37:35.044508",
+        "company": "connect_bpo",
+        "question": "how can i get more information on your services",
+        "matched_question": "How can I get more information on your services?",
+        "answer": "For more information on Connect BPO services, email hello@theconnectbpo.com, call +94 76 855 10 32, or use the Get In Touch form on https://www.theconnectbpo.com/. Our services include customer support, IT support, finance and accounting, HR outsourcing, data and analytics, application support, QA testing, and software development via Cloud99X.",
+        "score": 1.0,
+        "fallback": false
     }
 ]
